@@ -1,7 +1,8 @@
 import 'package:bloc/bloc.dart';
+import 'package:equatable/equatable.dart';
+
 import '../models/data_model.dart';
 import '../repos/games_repo.dart';
-import 'package:equatable/equatable.dart';
 
 part 'game_data_event.dart';
 part 'game_data_state.dart';

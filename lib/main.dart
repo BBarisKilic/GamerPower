@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:gamer_power/routes/app_router.dart';
-
+import 'routes/app_router.dart';
 import 'bloc/game_data_bloc.dart';
 import 'repos/games_repo.dart';
-import 'screens/home_page.dart';
 
 void main() {
   runApp(BlocProvider<GameDataBloc>(
