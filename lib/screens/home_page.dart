@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../routes/app_router.dart';
 import '../bloc/game_data_bloc.dart';
 import '../models/data_model.dart';
 import 'package:glassmorphism/glassmorphism.dart';
@@ -39,7 +41,7 @@ class HomePage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 8),
           child: InkWell(
             onTap: () {
-              // context.router.push(DetailsRoute(dataModel: dataModel));
+              context.router.push(DetailsRoute(dataModel: dataModel));
             },
             child: SizedBox(
               width: double.infinity,

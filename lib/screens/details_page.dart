@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
 
+import '../models/data_model.dart';
+
 class DetailsPage extends StatelessWidget {
-  const DetailsPage({Key? key}) : super(key: key);
+  final DataModel dataModel;
+
+  const DetailsPage({
+    Key? key,
+    required this.dataModel,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Container(color: Colors.red),
+    );
   }
 }

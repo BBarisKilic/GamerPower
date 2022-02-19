@@ -1,30 +1,38 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'screens/home_page.dart';
+
+import 'package:gamer_power/routes/app_router.dart';
 
 import 'bloc/game_data_bloc.dart';
 import 'repos/games_repo.dart';
+import 'screens/home_page.dart';
 
 void main() {
   runApp(BlocProvider<GameDataBloc>(
     create: (context) => GameDataBloc(GamesRepo()),
-    child: const App(),
+    child: App(appRouter: AppRouter()),
   ));
 }
 
 class App extends StatelessWidget {
-  const App({Key? key}) : super(key: key);
+  final AppRouter appRouter;
+
+  const App({
+    Key? key,
+    required this.appRouter,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'GamerPower',
       theme: ThemeData(
           primarySwatch: Colors.blue,
           brightness: Brightness.dark,
           scaffoldBackgroundColor: Colors.black),
-      home: const HomePage(),
+      routerDelegate: appRouter.delegate(),
+      routeInformationParser: appRouter.defaultRouteParser(),
     );
   }
 }
