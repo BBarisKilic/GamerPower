@@ -21,8 +21,9 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'GamerPower',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          primarySwatch: Colors.blue,
+          brightness: Brightness.dark,
+          scaffoldBackgroundColor: Colors.black),
       home: const HomePage(),
     );
   }
