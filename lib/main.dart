@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gamer_power/screens/landing_page.dart';
 
+import 'bloc/game_data_bloc.dart';
+import 'repos/games_repo.dart';
+
 void main() {
-  runApp(const App());
+  runApp(BlocProvider<GameDataBloc>(
+    create: (context) => GameDataBloc(GamesRepo()),
+    child: const App(),
+  ));
 }
 
 class App extends StatelessWidget {
