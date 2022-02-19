@@ -1,7 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:gamer_power/models/data_model.dart';
-import 'package:gamer_power/repos/games_repo.dart';
-import 'package:meta/meta.dart';
+import '../models/data_model.dart';
+import '../repos/games_repo.dart';
 import 'package:equatable/equatable.dart';
 
 part 'game_data_event.dart';

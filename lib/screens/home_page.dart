@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gamer_power/bloc/game_data_bloc.dart';
-import 'package:gamer_power/models/data_model.dart';
+import '../bloc/game_data_bloc.dart';
+import '../models/data_model.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 
-class LandingPage extends StatelessWidget {
-  const LandingPage({Key? key}) : super(key: key);
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

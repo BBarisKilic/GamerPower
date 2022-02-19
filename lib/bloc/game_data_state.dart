@@ -13,7 +13,7 @@ class GameDataLoadingState extends GameDataState {}
 
 class GameDataLoadedState extends GameDataState {
   final List<DataModel> apiResult;
-  GameDataLoadedState({
+  const GameDataLoadedState({
     required this.apiResult,
   });
 }
