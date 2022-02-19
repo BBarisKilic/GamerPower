@@ -1,7 +1,11 @@
 part of 'game_data_bloc.dart';
 
-@immutable
-abstract class GameDataState {}
+abstract class GameDataState extends Equatable {
+  const GameDataState();
+
+  @override
+  List<Object> get props => [];
+}
 
 class GameDataInitialState extends GameDataState {}
 
