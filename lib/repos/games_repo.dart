@@ -20,7 +20,7 @@ class GamesRepo {
     _result = await http.Client().get(Uri.parse(_url));
     _dataModels.clear();
 
-    if (_result.statusCode == 200) {
+    if (_result.statusCode != 200) {
       return null;
     } else {
       _models = jsonDecode(_result.body);

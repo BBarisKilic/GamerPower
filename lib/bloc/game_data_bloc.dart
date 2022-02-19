@@ -22,6 +22,7 @@ class GameDataBloc extends Bloc<GameDataEvent, GameDataState> {
           } else {
             emit(GameDataLoadedState(apiResult: _apiResult!));
           }
+
           break;
         default:
           emit(GameDataInitialState());
